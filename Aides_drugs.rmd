@@ -90,6 +90,17 @@ More females that were infected with aids received the actual drug. Just slightl
 
 Based on our graphical results, the relationship shown between the groups from the data is that the groups receiving the drug are not only sex specific, but also disease specific. You can see that sometimes there were more people that have not been infected with aids received either the actual drug or placebo. This was to see if the actual drug would be able to prevent aids completely. 
 
+## Numerical Results
+
+To view the results of our data numerically, we will use a two-way table with row percents using the rowPerc function from the tigerstats package.
+
+#### South Carolina
+
+
+
+#### Central Africa
+
+#### Korea
 
 
 
