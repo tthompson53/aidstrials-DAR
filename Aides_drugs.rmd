@@ -92,15 +92,48 @@ Based on our graphical results, the relationship shown between the groups from t
 
 ## Numerical Results
 
-To view the results of our data numerically, we will use a two-way table with row percents using the rowPerc function from the tigerstats package.
+To view the results of our data numerically, we will use a two-way table with row percents using the rowPerc function from the tigerstats package. 
 
 #### South Carolina
+```{r echo=FALSE}
+ScarolinaF_table <- xtabs(~infected + group, data = ScarolinaF)
+ScarolinaM_table <- xtabs(~infected + group, data = ScarolinaM)
+```
 
+```{r}
+rowPerc(ScarolinaF_table)
+```
+```{r}
+rowPerc(ScarolinaM_table)
+```
 
 
 #### Central Africa
+```{r echo=FALSE}
+cenAfricaF_table <- xtabs(~infected + group, data = cenAfricaF)
+cenAfricaM_table <- xtabs(~infected + group, data = cenAfricaM)
+```
+
+```{r}
+rowPerc(cenAfricaF_table)
+```
+```{r}
+rowPerc(cenAfricaM_table)
+```
 
 #### Korea
+```{r echo=FALSE}
+koreaM_table <- xtabs(~infected + group, data = koreaM)
+koreaF_table <- xtabs(~infected + group, data = koreaF)
+```
+
+```{r}
+rowPerc(koreaF_table)
+```
+
+```{r}
+rowPerc(koreaM_table)
+```
 
 
 
