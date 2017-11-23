@@ -18,10 +18,28 @@ cenAfrica<-read.csv(file="central_africa_aides.csv",header=TRUE)
 
 Three new preventative aides drugs were tested in clinical trials in 2015. The trial designs were modeled after the famous RV_144 Aides Trials in Tailand in 2009.  Analyze and report on the apparent effectiveness of the three different drugs. Does sex of the participant seem to be a factor for any of the drugs?
 
+#Inferential Results
+
+Looking only at the graphical and numerical results alone is not enough to tell us if these results can explain if the aids drug is sex specific or not. To do this, we will need to run an inferential test. The one we will use is the chi-square test. 
+
+We will now need to run six **chisqtestGC** function from the tigerstats package. We will run each test with the assumption that the aids drug is not sex specific.
+
+Our two hypotheses will apply to all six tests:
+
+$H_0$ The aids drug is not sex specific.  
+
+$H_a$ The aids drug is sex specific.
+
 
 # South Carolina
 
 We will subset the data by sex to see if the drug is sex specific.
+
+
+```{r}
+ScarolinaF <- filter(Scarolina,sex=="F")
+chisqtestGC(ScarolinaF_table)
+```
 
 
 # Central Africa
