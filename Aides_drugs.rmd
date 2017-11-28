@@ -104,6 +104,7 @@ ScarolinaM_table <- xtabs(~infected + group, data = ScarolinaM)
 rowPerc(ScarolinaF_table)
 ```
 
+
 More females (61.17%) that were infected with aids received a placebo drug. More females (50.55%) that were not infected with aids received the actual drug in hopes to prevent it. 
 
 ```{r}
@@ -151,7 +152,6 @@ More males (67.32%) that were infected with aids received the placebo drug. More
 ###Discussion on Numerical Results
 
 In South Carolina and Central Africa, more females that were infected with aids received a placebo drug. But in Korea, more females with aids received the actual drug. In Central Africa and Korea, more males that were infected with aids received the placebo drug whereas more males in South Carolina received the actual drug. The drug may be sex specific, but it seems more like a geographical issue instead of a sex issue. We will perform a **chisquare** test to help determine our answer for our research question. 
-
 
 
 
