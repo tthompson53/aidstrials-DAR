@@ -120,7 +120,7 @@ Scarolina_table <- xtabs(~infected + group, data = Scarolina)
 ScarolinaF_table <- xtabs(~infected + group, data = ScarolinaF)
 ScarolinaM_table <- xtabs(~infected + group, data = ScarolinaM)
 ```
-
+**South Carolina Two-Way Table**
 ```{r}
 rowPerc(Scarolina_table)
 ```
@@ -145,7 +145,7 @@ cenAfrica_table <- xtabs(~infected + group, data = cenAfrica)
 cenAfricaF_table <- xtabs(~infected + group, data = cenAfricaF)
 cenAfricaM_table <- xtabs(~infected + group, data = cenAfricaM)
 ```
-
+**Central Africa Two-Way Table**
 ```{r}
 rowPerc(cenAfrica_table)
 ```
@@ -169,7 +169,7 @@ korea_table <- xtabs(~infected + group, data= korea)
 koreaM_table <- xtabs(~infected + group, data = koreaM)
 koreaF_table <- xtabs(~infected + group, data = koreaF)
 ```
-
+**Korea Two-Way Table**
 ```{r}
 rowPerc(korea_table)
 ```
