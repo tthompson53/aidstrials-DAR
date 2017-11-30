@@ -14,7 +14,7 @@ korea<-read.csv(file="korea_aides.csv",header=TRUE)
 cenAfrica<-read.csv(file="central_africa_aides.csv",header=TRUE)
 ```
 
-#Instructions
+
 
 
 #**Introduction**
@@ -25,9 +25,13 @@ Our research question is:
 Is the drug effective in each region? Is the drug sex specific?
 
 
+#**Methods**
+The data for the Aides Tests is large, having over 4000 observations, 3 variables, and includes the data from the clinical trials in 2015. To make the data easier to use, we must trim it down. We will be using r code stored in a separate .r file to help do this. We start with the Aides Tests data from 2015 and then use the select function from the dplyr package to extract 3 variables that we must study in regards to our research question, we will only be using the data from South Carolina, Central Africa, and Korea. We still need to clean the data up a bit more. This was done in the following way:
+* We will subset each variable by sex to see if the drug is sex specific
+
 # South Carolina
 
-We will subset the data by sex to see if the drug is sex specific.
+We will subset the data by sex to see if the drug is sex specific.  
 
 
 
@@ -38,10 +42,10 @@ We will subset the data by sex to see if the drug is sex specific.
 We will subset the data by sex to see if the drug is sex specific.
 
 
-
 # Korea
 
 We will subset the data by sex to see if the drug is sex specific.
+
 
 
 
