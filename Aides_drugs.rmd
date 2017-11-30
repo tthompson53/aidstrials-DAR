@@ -17,13 +17,77 @@ cenAfrica<-read.csv(file="central_africa_aides.csv",header=TRUE)
 
 
 
+<<<<<<< HEAD
 
 
 #**Introduction**
 Three new preventative aides drugs were tested in clinical trials in 2015. The trial designs were modeled after the famous RV_144 Aides Trials in Thailand in 2009. The three aides drugs were distributed in three different geographical locations, South Carolina, Central Africa, and Korea. 
+=======
+
+
+#Inferential Results
+
+Looking only at the graphical and numerical results alone is not enough to tell us if these results can explain if the aids drug is sex specific or not. To do this, we will need to run an inferential test. The one we will use is the chi-square test. 
+
+We will now need to run nine **chisqtestGC** function from the tigerstats package. We will run each test with the assumption that the aids drug is sex specific.
+
+
+
+# South Carolina
+
+###As a Whole
+
+$H_0$ The aids drug is not effective. (Independent)
+
+$H_a$ The aids drug is effective.
+
+
+```{r}
+Scarolina_table <- xtabs(~infected + group, data = Scarolina)
+chisqtestGC(Scarolina_table)
+```
+
+
+The p-value is 89%, we accept the null hypothesis. We can assume that the drug is not effective.
+
+We will subset the data by sex to see if the drug is sex specific.
+
+###FEMALES
+
+
+
+$H_0$ The aids drug is not specific to females. (Independent)
+
+$H_a$ The aids drug is specific to females. 
+
+```{r}
+ScarolinaF <- filter(Scarolina, sex=="F")
+ScarolinaF_table <- xtabs(~infected + group, data = ScarolinaF)
+chisqtestGC(ScarolinaF_table)
+```
+The P-value is 2% which is obviously less than 5%. Due to this we will reject the null hypothesis and assume that the aids drug is specific to females.
+
+
+###MALES
+
+$H_0$ The aids drug is not specific to males. (Independent)
+
+$H_a$ The aids drug is specific to males.
+
+```{r}
+ScarolinaM <- filter(Scarolina,sex=="M")
+ScarolinaM_table <- xtabs(~infected + group, data = ScarolinaM)
+chisqtestGC(ScarolinaM_table)
+```
+The P-value is 9%, greater than 5%, so we will accept the null hypothesis and assume that the drug is not specific to males.
+
+
+
+>>>>>>> INFER
 
 Our research question is:
 
+<<<<<<< HEAD
 Is the drug effective in each region? Is the drug sex specific?
 
 
@@ -86,6 +150,48 @@ More males infected with aids received the placebo drug. Half of the males that 
 cenAfricaF <- filter(cenAfrica,sex=="F")
 barchartGC(~infected + group, data=cenAfricaF, type="percent")
 ```
+=======
+
+
+##As a Whole
+
+$H_0$ The aids drug is not effective. (Inependent)
+
+$H_a$ The aids drug is effective.
+
+```{r}
+cenAfrica_table <- xtabs(~infected + group, data = cenAfrica)
+chisqtestGC(cenAfrica_table)
+```
+The P-value is 57%, accepting the null hypothesis that the drug in Central Africa is not effective.
+
+We will subset the data by sex to see if the drug is sex specific.
+
+###FEMALES
+
+$H_0$ The aids drug is not specific to females. (Independent)
+
+$H_a$ The aids drug is specific to females.
+
+```{r}
+cenAfricaF <- filter(cenAfrica, sex=="F")
+cenAfricaF_table <- xtabs(~infected + group, data = cenAfricaF)
+chisqtestGC(cenAfricaF_table)
+```
+The P-value is 50%, we accept the null hypothesis and assume that the drug is not specific to females.
+
+###MALES###
+$H_0$ The aids drug is not specific to males. (Independent)
+
+$H_a$ The aids drug is specific to males.
+
+```{r}
+cenAfricaM <- filter(cenAfrica,sex=="M")
+cenAfricaM_table <- xtabs(~infected + group, data = cenAfricaM)
+chisqtestGC(cenAfricaM_table)
+```
+The P-value is 1, we accept the null hypothesis and assume that the drug is independent and not specific to males. 
+>>>>>>> INFER
 
 More females were infected with aids received the placebo. Just slightly more females that were not infected with aids received the actual drug. 
 
@@ -99,8 +205,22 @@ barchartGC(~infected + group, data= korea, type= "percent")
 There were more people that were infected with aids that had the placebo vaccine (about 50%). Those that were not infected, 50% was given the drug and 50% was given the placebo.
 
 
+###As a Whole
+
+$H_0$ The aids drug is not effective. (Inependent)
+
+$H_a$ The aids drug is effective.
+
+```{r}
+korea_table <- xtabs(~infected + group, data= korea)
+chisqtestGC(korea_table)
+```
+
+The P-value is 69%, we will accept the null hypothesis and assume that the drug is independent and not effective. 
+
 We will subset the data by sex to see if the drug is sex specific.
 
+<<<<<<< HEAD
 ##### Korea Aids Results (Males)
 
 ```{r}
@@ -203,8 +323,32 @@ More males (67.32%) that were infected with aids received the placebo drug. More
 
 Regarding each geographical location, more people that have have aids received the palcebo drug whereas more that did not have aids received the actual drug. In South Carolina and Central Africa, more females that were infected with aids received a placebo drug. But in Korea, more females with aids received the actual drug. In Central Africa and Korea, more males that were infected with aids received the placebo drug whereas more males in South Carolina received the actual drug. The drug may be sex specific, but it seems more like a geographical issue instead of a sex issue. We will perform a **chisquare** test to help determine our answer for our research question. 
 
+=======
+###FEMALES
 
+$H_0$ The aids drug is not specific to females. (Inependent)
+>>>>>>> INFER
 
+$H_a$ The aids drug is specific to females.
 
+```{r}
+koreaF <- filter(korea,sex=="F")
+koreaF_table <- xtabs(~infected + group, data = koreaF)
+chisqtestGC(koreaF_table)
+```
+The P-value is 0 assuming that the drug is specific to females.
 
+###MALES
+
+$H_0$ The aids drug is not specific to males. (Inependent)
+
+$H_a$ The aids drug is specific to males.
+
+```{r}
+koreaM <- filter(korea, sex=="M")
+koreaM_table <- xtabs(~infected + group, data = koreaM)
+chisqtestGC(koreaM_table)
+```
+
+The P-value is zero, we reject the null hypothesis and assume that the drug is specific to males. 
 
