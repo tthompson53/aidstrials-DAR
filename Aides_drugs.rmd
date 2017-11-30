@@ -1,7 +1,7 @@
 ---
 title: "Aides Tests"
-author: "Dr K"
-date: "May 24, 2017"
+author: "Tristyn Thompson"
+date: "December 6, 2017"
 output: html_document
 ---
 
@@ -204,6 +204,7 @@ We will now need to run nine **chisqtestGC** function from the tigerstats packag
 
 
 
+<<<<<<< HEAD
 # South Carolina
 
 ###As a Whole
@@ -293,7 +294,7 @@ cenAfricaM_table <- xtabs(~infected + group, data = cenAfricaM)
 chisqtestGC(cenAfricaM_table)
 ```
 The P-value is 1, we accept the null hypothesis and assume that the drug is independent and not specific to males. 
->>>>>>> INFER
+
 
 ##Korea
 ###As a Whole
@@ -317,6 +318,7 @@ $H_0$ The aids drug is not specific to females. (Inependent)
 
 $H_a$ The aids drug is specific to females.
 
+
 ```{r}
 koreaF <- filter(korea,sex=="F")
 koreaF_table <- xtabs(~infected + group, data = koreaF)
@@ -337,4 +339,10 @@ chisqtestGC(koreaM_table)
 ```
 
 The P-value is zero, we reject the null hypothesis and assume that the drug is specific to males. 
+
+
+#Conclusion
+
+We made bar charts and numerical tables for each location specific to different drug. In the chisquare tests we learn that all three drugs are not effective in preventing aids. We do learn, however, that the drugs can be sex specific. In South Carolina, this drug is specific to females and that it may have had a positive influence on them. In Central Africa we learn that the drug is not specific to either sex and may have had a negative influence on both males and females. In Korea we learn that the drug is specific to males and females and may have had a positive influence on both groups. 
+
 
