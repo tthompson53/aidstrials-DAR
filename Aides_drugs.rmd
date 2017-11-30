@@ -19,21 +19,9 @@ cenAfrica<-read.csv(file="central_africa_aides.csv",header=TRUE)
 Three new preventative aides drugs were tested in clinical trials in 2015. The trial designs were modeled after the famous RV_144 Aides Trials in Tailand in 2009.  Analyze and report on the apparent effectiveness of the three different drugs. Does sex of the participant seem to be a factor for any of the drugs?
 
 
-# South Carolina
+#Conclusion
 
-We will subset the data by sex to see if the drug is sex specific.
-
-
-# Central Africa
-
-We will subset the data by sex to see if the drug is sex specific.
-
-
-
-# Korea
-
-We will subset the data by sex to see if the drug is sex specific.
-
+We made bar charts and numerical tables for each location specific to different drug. In the chisquare tests we learn that all three drugs are not effective in preventing aids. We do learn, however, that the drugs can be sex specific. In South Carolina, this drug is specific to females and that it may have had a positive influence on them. In Central Africa we learn that the drug is not specific to either sex and may have had a negative influence on both males and females. In Korea we learn that the drug is specific to males and females and may have had a positive influence on both groups. 
 
 
 
